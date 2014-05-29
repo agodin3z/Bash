@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script para instalar driver wifi de tarjetas broadcom
+# Script para instalar driver wifi de tarjetas broadcom en Debian y derivados
 
 echo ""
 echo "Instalando los paquetes: module-assistant y wireless-tools"
