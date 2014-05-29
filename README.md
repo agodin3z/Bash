@@ -1,4 +1,4 @@
 Bash
 ====
 
-Varios script escritos en Bash
+- Varios script escritos en Bash.
