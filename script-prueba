@@ -1,0 +1,105 @@
+#!/bin/bash
+# Twitter: @AndrewsGodinez
+# Video del Script: https://www.youtube.com/watch?v=y8MnDctHRFM
+# Para saber que terminales estan abiertas ejecutar el comando "who"
+
+#Limpia todas las terminales
+clear > /dev/pts/0 | clear > /dev/pts/1 | clear > /dev/pts/2 | clear > /dev/pts/3 | clear > /dev/pts/4
+sleep 5 #Pausa de 5 segundos
+
+#Muestra la salida del comando figlet en la terminal 0
+figlet "Te sientes aburrid@???" > /dev/pts/0
+sleep 1 #Pausa
+
+#Muestra la salida del comando figlet en la terminal 0
+figlet "Pues..." > /dev/pts/0
+sleep 2 #Pausa
+
+#Muestra la salida del comando figlet en la terminal 3
+figlet "Juega con la Terminal de GNU/Linux    xD" > /dev/pts/3
+sleep 3 #Pausa
+
+#Muestra la salida del comando sl en las terminales 1, 2 y 4 simultaneamente
+sl -a > /dev/pts/2 | sl -a > /dev/pts/4 | sl -l > /dev/pts/1
+sleep 1 #Pausa
+
+#Muestra la salida del comando figlet en la terminal 1
+figlet "Que hora es???" > /dev/pts/1
+sleep 2
+
+#Muestra la hora y fecha cada segundo y se queda ejecutando hasta que termine el script
+watch -n 1 'figlet $(date +%d%m%y\ %T)' > /dev/pts/1 &
+
+#Limpia todas las terminales abiertas, excepto donde se muestra la hora
+clear > /dev/pts/0 | clear > /dev/pts/2 | clear > /dev/pts/3 | clear > /dev/pts/4
+
+#Muestra la salida del comando sl en las terminales 0, 2, 3 y 4 simultaneamente
+sl -a > /dev/pts/0 | sl -a > /dev/pts/4 | sl -a > /dev/pts/2 | sl -a > /dev/pts/3
+sleep 1 #Pausa
+
+#Muestra la salida del comando sl en la terminal 3, luego en la terminal 0, despues en la terminal 4 y por ultimo en la terminal 2
+sl > /dev/pts/3 && sl > /dev/pts/0 && sl > /dev/pts/4 && sl > /dev/pts/2
+
+#Muestra la salida del comando sl en la terminal 4 y luego en la terminal 0
+sl -lF > /dev/pts/4 && sl -lF > /dev/pts/0
+sleep 2 #Pausa
+
+#Limpia todas las terminales excepto la terminal 1
+clear > /dev/pts/0 | clear > /dev/pts/4 | clear > /dev/pts/2 | clear > /dev/pts/3
+
+#Dibujos graciosos en la terminal 0
+echo "eh??" | cowsay -f head-in -n | cowsay -f bunny -n > /dev/pts/0
+sleep 2 #Pausa
+echo "whut??" | cowsay -f sodomized-sheep -n | cowsay -f bunny -n > /dev/pts/0
+sleep 2 #Pausa
+echo " GNU/Linux es genial! " | cowsay -f bunny -n | cowsay -f tux -n > /dev/pts/0
+sleep 2 #Pausa
+
+#Dibujo gracioso en la terminal 3
+cowsay -f stegosaurus " Y es divertido... " > /dev/pts/3
+sleep 2 #Pausa
+
+#Dibujo gracioso en la terminal 2
+cowsay -f turtle " Solo tienes que... " > /dev/pts/2
+sleep 2 #Pausa
+
+#Dibujo gracioso en la terminal 4
+cowsay -f dragon-and-cow " Tener imaginacion  xD " > /dev/pts/4
+sleep 4 #Pausa
+
+#Limpia todas las terminales excepto la terminal 1
+clear > /dev/pts/0 | clear > /dev/pts/4 | clear > /dev/pts/2 | clear > /dev/pts/3
+
+# Mensajes en las terminales 0, 2, 3 y 4
+figlet "Comunidad de Usuarios de Software" > /dev/pts/0
+figlet "y Hardware Libre  UESOcc" > /dev/pts/3
+sleep 2 #Pausa 
+figlet "         'Just for Fun' " > /dev/pts/2
+sleep 1 #Pausa
+figlet " Siguenos en las Redes Sociales: " > /dev/pts/4
+sleep 3 #Pausa
+
+#Limpia todas las terminales excepto la terminal 1
+clear > /dev/pts/0 | clear > /dev/pts/4 | clear > /dev/pts/2 | clear > /dev/pts/3
+
+# Mensajes en las terminales 0, 2, 3 y 4
+figlet "FACEBOOK: cshluesocc" > /dev/pts/0
+sleep 2 #Pausa
+figlet "TWITTER: @csluesocc" > /dev/pts/3
+sleep 2 #Pausa
+figlet "YOUTUBE: csluesocc" > /dev/pts/2
+sleep 2 #Pausa
+figlet "GITHUB: csluesocc" > /dev/pts/4
+sleep 7 #Pausa
+
+#Finaliza el porceso watch que muestra el reloj en la terminal 1
+pkill watch
+
+#Limpia todas las terminales
+clear > /dev/pts/0 | clear > /dev/pts/1 | clear > /dev/pts/2 | clear > /dev/pts/3 | clear > /dev/pts/4
+
+# Mensaje FIN en todas las terminales abiertas
+figlet "       Fin" > /dev/pts/0 | figlet "       Fin" > /dev/pts/1 | figlet "       Fin" > /dev/pts/2 | figlet "       Fin" > /dev/pts/3 | figlet "       Fin" > /dev/pts/4
+sleep 6 #Pausa
+
+pkill recordmydesktop #Detiene la grabacion con Record My Desktop
