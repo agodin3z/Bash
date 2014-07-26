@@ -4,7 +4,7 @@
 echo ""
 echo "Instalando los paquetes: module-assistant y wireless-tools"
 sleep 1
-apt-get -y install module-assistant wireless-tools
+apt-get -y install module-assistant wireless-tools firmware-realtek network-manager
 echo ""
 echo "Se instalaran otros paquetes necesarios, digite 'S' o 'Y' a todo...."
 m-a a-i broadcom-sta
