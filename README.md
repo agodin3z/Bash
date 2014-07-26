@@ -4,20 +4,20 @@ Script escritos en Bash.
 
 ## ¿Cómo ejecutar un script de bash? ##
 
-*Primer método:
+* Primer método:
 
 ```
 $ chmod +x ./nombre_script.sh    #Damos permisos de ejecución al script
 $ sh ./nombre_script.sh 
 ```
 
-*Segundo método:
+* Segundo método:
 
 ```
 $ bash nombre_script.sh
 ```
 
-*Tercer método:
+* Tercer método:
 
 ```
 $ source nombre_script.sh
